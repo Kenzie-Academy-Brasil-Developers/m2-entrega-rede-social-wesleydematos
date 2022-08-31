@@ -1,0 +1,8 @@
+#btnLogin{
+    background-color: var(--cinza);
+}
+
+#btnLogin:hover{
+    background-color: var(--preto);
+}
+
