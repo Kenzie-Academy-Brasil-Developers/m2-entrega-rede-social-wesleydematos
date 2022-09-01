@@ -55,9 +55,29 @@ form{
     border-radius: 4px;
 }
 
-form > h1, form div, form > button, form > p{
+form > div{
+    position: relative;
+}
+
+form > div > input{
+    width: 98%;
+    height: 100%;
+    padding-left: 2%;
+    border: 1px solid var(--cinza);
+    border-radius: 4px;
+}
+
+form div, form > button, form > p{
     width: 90%;
     margin: 0 5% 0 5%;
+}
+
+form > p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--preto);
 }
 
 form > button{

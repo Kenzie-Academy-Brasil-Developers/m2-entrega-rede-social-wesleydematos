@@ -19,16 +19,9 @@ body{
     top: 74px;
 }
 
-form > div{
-    position: relative;
-}
-
-form > div > input{
-    width: 98%;
-    height: 100%;
-    padding-left: 2%;
-    border: none;
-    border-radius: 4px;
+form > h1{
+    width: 90%;
+    margin: 0 5% 0 5%;
 }
 
 #spanEmail::before{
@@ -71,14 +64,6 @@ form > div > input{
     border: 1px solid var(--azul);
     background-color: var(--branco);
     color: var(--azul);
-}
-
-form > p{
-    text-align: center;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--preto);
 }
 
 #redirecionaBtn{
