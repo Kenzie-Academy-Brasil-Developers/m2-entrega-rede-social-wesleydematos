@@ -18,3 +18,19 @@ body{
     width: 100vw;
     top: 74px;
 }
+
+#spanEmail::before{
+    content: '\58';
+    font-family: fontAwesome;
+    cursor: pointer;
+}
+
+#spanSenha::before{
+    font-family: fontAwesome;
+    cursor: pointer;
+    content: '\f06e';
+}
+
+#spanSenha.hide::before{
+    content: '\f070';
+}
