@@ -1,3 +1,7 @@
+body{
+    background-color: var(--branco-escuro);
+}
+
 #btnLogin{
     background-color: var(--cinza);
 }
@@ -6,3 +10,11 @@
     background-color: var(--preto);
 }
 
+.login{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 110px;
+    width: 100vw;
+    top: 74px;
+}
