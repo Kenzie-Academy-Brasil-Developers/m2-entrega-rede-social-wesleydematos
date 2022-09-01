@@ -47,6 +47,22 @@ button{
 form{
     display: flex;
     flex-direction: column;
+    padding: 40px 0 40px 0;
+    gap: 20px;
     width: 32%;
     background-color: var(--branco);
+    border-radius: 4px;
+}
+
+form > h1, form div, form > button, form > p{
+    width: 90%;
+    margin: 0 5% 0 5%;
+}
+
+form > button{
+    height: 38px;
+}
+
+form > div{
+    height: 52px;
 }
