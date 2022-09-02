@@ -1,0 +1,101 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 132px;
+    width: 21%;
+}
+
+aside > h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 60px;
+    color: var(--preto);
+}
+
+.aside__sugestoes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.aside__perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aside__pefil__info{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.perfil__foto{
+    width: 52px;
+    height: 52px;
+}
+
+.perfil__foto > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.nome__cargo{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nome__cargo > h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--preto);
+}
+
+.nome__cargo > p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--cinza);
+}
+
+.btn__seguir{
+    height: 23px;
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.btn__seguir:hover{
+    color: var(--azul);
+    border: 1px solid var(--azul);
+}
+
+.btn__seguindo{
+    height: 23px;
+    background-color: var(--azul);
+    border: 1px solid var(--azul);
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 0px;
+    line-height: 17px;
+}
+
+.btn__seguindo::before{
+    content: 'Seguindo';
+    font-size: 14px;
+}
+
+.btn__seguindo:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+    border: 1px solid var(--preto);
+}
