@@ -97,3 +97,9 @@ form div:first-child button:hover{
     background-color: var(--branco);
     color: var(--preto);
 }
+
+@media(max-width: 900px){
+    .cadastro{
+        margin-top: 30px;
+    }
+}

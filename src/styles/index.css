@@ -77,3 +77,9 @@ form > h1{
     background-color: var(--branco);
     color: var(--preto);
 }
+
+@media(max-width: 900px){
+    .login{
+        margin-top: 60px;
+    }
+}
