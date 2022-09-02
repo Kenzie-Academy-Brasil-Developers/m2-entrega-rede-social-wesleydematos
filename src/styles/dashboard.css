@@ -12,6 +12,53 @@ main{
     width: 50%;
 }
 
+.section__criar__post{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+}
+
+.section__perfil{
+    display: flex;
+    height: 52px;
+    gap: 10px;
+}
+
+.titulo__post, .descricao__post{
+    margin-top: 25px;
+    width: 96.5%;
+    height: 52px;
+    padding-left: 3%;
+    border: 1px solid var(--cinza);
+    border-radius: 4px;
+}
+
+.descricao__post{
+    height: 130px;
+}
+
+#btnPostar{
+    width: fit-content;
+    align-self: flex-end;
+    margin-top: 25px;
+    background-color: #868E96;
+    color: var(--cinza);
+    border-radius: 4px;
+    height: 32px;
+}
+
+#btnPostar:hover{
+    color: var(--branco);
+}
+
+.section__perfil > span{
+    color: var(--preto);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 aside{
     display: flex;
     flex-direction: column;
