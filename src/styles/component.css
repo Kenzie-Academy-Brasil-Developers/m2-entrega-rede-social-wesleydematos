@@ -1,3 +1,7 @@
+/* ESTILOS GLOBAIS:  */
+
+/* HEADER */
+
 header{
     display: flex;
     flex-direction: row;
@@ -24,6 +28,8 @@ header{
     margin-right: 6.9376%;
 }
 
+/* BOTÕES */
+
 button{
     cursor: pointer;
 }
@@ -39,6 +45,8 @@ button{
 .header__btns button:hover{
     background-color: var(--cinza);
 }
+
+/* FORMULÁRIOS */
 
 form{
     display: flex;
