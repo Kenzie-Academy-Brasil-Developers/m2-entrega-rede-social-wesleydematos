@@ -40,10 +40,6 @@ button{
     background-color: var(--cinza);
 }
 
-.btn_hidden{
-    display: none;
-}
-
 form{
     display: flex;
     flex-direction: column;
