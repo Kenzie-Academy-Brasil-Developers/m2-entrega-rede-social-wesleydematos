@@ -152,6 +152,7 @@ aside > h2{
 .pefil__info{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
 }
 
@@ -169,6 +170,7 @@ aside > h2{
 .nome__cargo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -228,7 +230,13 @@ aside > h2{
     }
 
     aside{
+        margin-top: 100px;
+        margin-left: 10%;
         width: 75%;
+    }
+
+    aside > h2{
+        margin-bottom: 30px;
     }
 
     main{
