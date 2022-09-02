@@ -1,8 +1,23 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 132px;
+    width: 50%;
+}
+
 aside{
     display: flex;
     flex-direction: column;
     position: relative;
     margin-top: 132px;
+    margin-right: 50px;
     width: 21%;
 }
 
@@ -28,7 +43,7 @@ aside > h2{
     width: 100%;
 }
 
-.aside__pefil__info{
+.pefil__info{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -98,4 +113,16 @@ aside > h2{
     background-color: var(--branco);
     color: var(--preto);
     border: 1px solid var(--preto);
+}
+
+@media(max-width: 900px){
+    body{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    aside{
+        width: 50%;
+    }
+
 }
