@@ -228,7 +228,17 @@ aside > h2{
     }
 
     aside{
-        width: 50%;
+        width: 75%;
+    }
+
+    main{
+        margin-top: 74px;
+        width: 75%;
+    }
+
+    .aside__sugestoes{
+        flex-direction: row;
+        overflow-y: auto;
     }
 
 }
