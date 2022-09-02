@@ -48,8 +48,67 @@ main{
     height: 32px;
 }
 
+#btnPostar.post__pronto{
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+#btnPostar.post__pronto:hover{
+    background-color: blue;
+}
+
 #btnPostar:hover{
     color: var(--branco);
+}
+
+.section__posts{
+}
+
+.section__posts h1{
+    margin-bottom: 50px;
+}
+
+article{
+    padding-bottom: 50px;
+}
+
+article > h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+article > p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--cinza);
+}
+
+.abre__post{
+    height: 32px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border-radius: 4px;
+}
+
+.abre__post:hover{
+    background-color: black;
+}
+
+.like__span{
+    margin-left: 32px;
+}
+
+.like__span::before{
+    font-family: fontAwesome;
+    cursor: pointer;
+    content: '\f004';
+    color: var(--cinza);
+}
+
+.like__span.curtido::before{
+    color: var(--vermelho);
 }
 
 .section__perfil > span{
