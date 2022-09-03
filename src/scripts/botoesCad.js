@@ -3,7 +3,7 @@ export class BotoesCadastro{
         botao.addEventListener('click', (event)=>{
             event.preventDefault()
 
-            window.location.replace('../../index.html')
+            window.location.assign('../../index.html')
         })
     }
 
