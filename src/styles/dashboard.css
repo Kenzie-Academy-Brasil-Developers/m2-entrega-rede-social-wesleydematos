@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    position: relative;
 }
 
 main{
@@ -10,6 +11,7 @@ main{
     position: relative;
     margin-top: 132px;
     width: 50%;
+    margin-right: 9%;
 }
 
 .section__criar__post{
@@ -121,8 +123,10 @@ article > p{
 aside{
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin-top: 132px;
+    position: fixed;
+    top: 74px;
+    right: 0;
+    margin-top: 58px;
     margin-right: 50px;
     width: 21%;
 }
@@ -230,8 +234,10 @@ aside > h2{
     }
 
     aside{
+        position: relative;
+        top: 0;
+        left: 0;
         margin-top: 100px;
-        margin-left: 10%;
         width: 75%;
     }
 
