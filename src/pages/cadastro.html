@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/component.css">
     <link rel="stylesheet" href="../styles/cadastro.css">
+    <script src="../scripts/cadastro.js" type="module" defer></script>
     <title>TechPosters - Registro</title>
 </head>
 <body>
@@ -29,24 +30,24 @@
                 <button>Voltar</button>
             </div>
             <div>
-                <input type="text" placeholder="Digite seu nome">
+                <input id="inputNome" type="text" placeholder="Digite seu nome">
                 <span id="spanCadNome"></span>
             </div>
             <div>
-                <input type="email" placeholder="Digite seu email">
+                <input id="inputEmail" type="email" placeholder="Digite seu email">
                 <span id="spanCadEmail"></span>
             </div>
             <div>
-                <input type="password" placeholder="Digite sua senha">
+                <input id="inputSenha" type="password" placeholder="Digite sua senha">
                 <span id="spanCadSenha"></span>
                 <!-- class="hide" -->
             </div>
             <div>
-                <input type="text" placeholder="Qual o seu trabalho?">
+                <input id="inputTrabalho" type="text" placeholder="Qual o seu trabalho?">
                 <span id="spanCadTrabalho"></span>
             </div>
             <div>
-                <input type="text" placeholder="URL da imagem de perfil">
+                <input id="inputFoto" type="text" placeholder="URL da imagem de perfil">
                 <span id="spanCadFoto"></span>
             </div>
             <button id="registarBtn">Registrar</button>
