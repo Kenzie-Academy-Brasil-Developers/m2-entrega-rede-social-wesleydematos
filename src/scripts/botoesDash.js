@@ -5,6 +5,7 @@ export class BotoesDashboard {
         btnCadLogin.addEventListener('click', (event)=>{
             event.preventDefault()
 
+            localStorage.clear()
             window.location.replace('../../index.html')
         })
     }
