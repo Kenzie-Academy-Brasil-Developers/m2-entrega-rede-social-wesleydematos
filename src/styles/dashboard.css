@@ -11,7 +11,6 @@ main{
     position: relative;
     margin-top: 132px;
     width: 50%;
-    margin-right: 9%;
 }
 
 .section__criar__post{
@@ -123,11 +122,9 @@ article > p{
 aside{
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 74px;
+    position: sticky;
     right: 0;
-    margin-top: 58px;
-    margin-right: 50px;
+    margin-top: 132px;
     width: 21%;
 }
 
@@ -239,6 +236,18 @@ aside > h2{
         left: 0;
         margin-top: 100px;
         width: 75%;
+    }
+
+    .aside__perfil{
+        flex-direction: column;
+    }
+
+    .btn__seguindo{
+        width: 70%;
+    }
+
+    .btn__seguir{
+        width: 60%;
     }
 
     aside > h2{
