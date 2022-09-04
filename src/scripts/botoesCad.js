@@ -37,8 +37,6 @@ export class BotoesCadastro{
                 "image": image.value
             })
 
-            console.log(body)
-
             Api.cadastro(body)
             window.location.assign('../../index.html')
         })

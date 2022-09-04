@@ -8,7 +8,6 @@ export class Api{
     }
 
     static async cadastro(body){
-        console.log(body)
         const result = await fetch(`${this.baseUrl}/users/`,{
             method: 'POST',
             headers: {
