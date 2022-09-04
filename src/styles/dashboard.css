@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     position: relative;
 }
 
@@ -10,6 +10,7 @@ main{
     flex-direction: column;
     position: relative;
     margin-top: 132px;
+    margin-right: 140px;
     width: 50%;
 }
 
@@ -122,8 +123,8 @@ article > p{
 aside{
     display: flex;
     flex-direction: column;
-    position: sticky;
-    right: 0;
+    position: fixed;
+    right: 100px;
     margin-top: 132px;
     width: 21%;
 }
@@ -226,6 +227,7 @@ aside > h2{
 
 @media(max-width: 900px){
     body{
+        justify-content: center;
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -255,6 +257,7 @@ aside > h2{
     }
 
     main{
+        margin-left: 132px;
         margin-top: 74px;
         width: 75%;
     }
