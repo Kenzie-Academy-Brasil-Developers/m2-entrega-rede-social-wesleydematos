@@ -67,4 +67,14 @@ export class BotoesDashboard {
     static fecharPost(){
 
     }
+
+    static voltaLogin(){
+        let token = localStorage.getItem('@redeSocial:token')
+        let user_uuid = localStorage.getItem('@redeSocial:user_uuid')
+
+        if(!token || !user_uuid){
+            localStorage.clear()
+            window.location.assign('../../index.html')
+        }
+    }
 }
