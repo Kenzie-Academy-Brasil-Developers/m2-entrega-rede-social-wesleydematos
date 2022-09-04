@@ -166,7 +166,7 @@ aside > h2{
 .perfil__foto > img{
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .nome__cargo{
