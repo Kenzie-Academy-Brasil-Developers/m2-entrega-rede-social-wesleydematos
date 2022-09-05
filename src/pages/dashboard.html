@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href=".././assets/logo.png">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/component.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <script src="../scripts/dashboard.js" type="module" defer></script>
+    <title>TechPosters</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <h2>TechPosters</h2>
+        </div>
+        <div class="header__btns">
+            <button id="btnCadLogin">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section__criar__post">
+            <div class="section__perfil">
+                <div class="pefil__info">
+                    <div class="perfil__foto"><img id="fotoUserLogado" src="" alt=""></div>
+                    <div class="nome__cargo">
+                        <h2 id="nomeUserLogado">Alguma Pessoa</h2>
+                        <p id="cargoUserLogado">Algum Cargo</p>
+                    </div>
+                </div>
+                <span id="seguidoresUserLogado">X seguidores</span>
+            </div>
+            <input type="text" class="titulo__post" placeholder="Digitar titulo do post">
+            <input type="text" class="descricao__post" placeholder="Digitar descrição do post">
+            <button id="btnPostar">Postar</button>
+        </section>
+
+        <section class="section__posts">
+            <h1>Posts</h1>
+
+        </section>
+
+    </main>
+
+    <div class="modalPost">
+        <span id="closeModal">X</span>
+        <div class="modal">
+            <div class="perfil__foto"><img src="" alt="" id="imagemModal"></div>
+                    <div class="nome__cargo">
+                        <h2 id="nomeModal"></h2>
+                        <p id="cargoModal"></p>
+                    </div>
+            <h2 id="tituloModal"></h2>
+            <p id="conteudoModal"></p>
+        </div>
+    </div>
+
+    <aside>
+        <h2>Sugestões para você seguir</h2>
+        <div class="aside__sugestoes">
+            
+        </div>
+    </aside>
+
+
+</body>
+</html>

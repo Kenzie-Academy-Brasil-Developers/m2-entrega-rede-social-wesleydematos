@@ -1,0 +1,85 @@
+body{
+    background-color: var(--branco-escuro);
+}
+
+#btnLogin{
+    background-color: var(--cinza);
+}
+
+#btnLogin:hover{
+    background-color: var(--preto);
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 110px;
+    width: 100vw;
+    top: 74px;
+}
+
+form > h1{
+    width: 90%;
+    margin: 0 5% 0 5%;
+}
+
+#spanEmail::before{
+    content: '\58';
+    font-family: fontAwesome;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 4.5%;
+    margin-right: 2%;
+    color: var(--cinza);
+}
+
+#spanSenha::before{
+    font-family: fontAwesome;
+    cursor: pointer;
+    content: '\f06e';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 4.5%;
+    margin-right: 1.5%;
+    color: var(--cinza);
+}
+
+#spanSenha.hide::before{
+    content: '\f070';
+}
+
+#logarBtn{
+    margin-left: 5.5%;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#logarBtn:hover{
+    border: 1px solid var(--azul);
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+#redirecionaBtn{
+    background-color: var(--preto);
+    color: var(--branco);
+    border: 1px solid var(--preto);
+    margin-left: 5.5%;
+}
+
+#redirecionaBtn:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+@media(max-width: 900px){
+    .login{
+        margin-top: 60px;
+    }
+}

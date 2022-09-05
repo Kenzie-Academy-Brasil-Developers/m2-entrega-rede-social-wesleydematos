@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href=".././assets/logo.png">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/component.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <script src="../scripts/cadastro.js" type="module" defer></script>
+    <title>TechPosters - Registro</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <h2>TechPosters</h2>
+        </div>
+        <div class="header__btns">
+            <button id="btnCadLogin">Login</button>
+            <button id="btnCadRegistro">Registro</button>
+        </div>
+    </header>
+
+    <section class="cadastro">
+        <form>
+            <div>
+                <h1>Cadastro</h1>
+                <button id="btnVoltar">Voltar</button>
+            </div>
+            <div>
+                <input id="inputNome" type="text" placeholder="Digite seu nome">
+                <span id="spanCadNome"></span>
+            </div>
+            <div>
+                <input id="inputEmail" type="email" placeholder="Digite seu email">
+                <span id="spanCadEmail"></span>
+            </div>
+            <div>
+                <input id="inputSenha" type="password" placeholder="Digite sua senha">
+                <span id="spanCadSenha"></span>
+            </div>
+            <div>
+                <input id="inputTrabalho" type="text" placeholder="Qual o seu trabalho?">
+                <span id="spanCadTrabalho"></span>
+            </div>
+            <div>
+                <input id="inputFoto" type="text" placeholder="URL da imagem de perfil">
+                <span id="spanCadFoto"></span>
+            </div>
+            <button id="registarBtn">Registrar</button>
+            <p>Já possui login?</p>
+            <button id="redirecionaCadBtn">Ir para a página de login</button>
+        </form>
+    </section>
+</body>
+</html>
