@@ -45,6 +45,10 @@ export class Api{
 
             if(token && user_uuid){
                 window.location.assign('./src/pages/dashboard.html')
+            }else{
+                let modal = document.getElementById('modal')
+
+                modal.style.display = 'flex'
             }
 
             return response

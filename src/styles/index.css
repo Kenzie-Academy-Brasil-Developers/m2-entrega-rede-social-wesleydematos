@@ -78,6 +78,58 @@ form > h1{
     color: var(--preto);
 }
 
+#modal{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 1;
+}
+
+.content__modal{
+    display: flex;
+    position: absolute;
+    background-color: var(--azul);
+    bottom: 0;
+    right: 0;
+    margin: 0 20px 40px;
+    width: 446px;
+    height: 188px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.content__modal span{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--branco);
+    margin: 20px 0 0 10px;
+}
+
+.content__modal p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--branco);
+    margin: 20px 8px 0 10px;
+    width: 350px;
+    height: 48px;   
+}
+
+.content__modal button{
+    position: absolute;
+    width: 76px;
+    height: 38px;
+    left: 350px;
+    top: 126px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
+
 @media(max-width: 900px){
     .login{
         margin-top: 60px;

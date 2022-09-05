@@ -14,3 +14,16 @@ BotoesIndex.redirecionaCadastro(btnRegistro)
 BotoesIndex.redirecionaCadastro(redirecionaBtn)
 BotoesIndex.recarregaPage()
 BotoesIndex.logar()
+
+function fechaModal(){
+    let btnEntendi = document.getElementById('btnEntendi')
+
+    btnEntendi.addEventListener('click', (event)=>{
+        event.preventDefault()
+
+        let modal = document.getElementById('modal')
+        modal.style.display = 'none'
+    })
+}
+
+fechaModal()
