@@ -90,6 +90,39 @@ export class Api{
         return result
     }
 
+    static async buscaPosts(){
+        const result = await fetch(`${this.baseUrl}/posts/`, {
+            method: 'GET',
+            headers: this.headers
+        })
+        .then(response => response.json())
+        .catch(err => console.log(err))
+
+        return result
+    }
+
+    static async buscaLikes(body){
+        const result = await fetch(`${this.baseUrl}/likes/`, {
+            method: 'POST',
+            headers: this.headers,
+            body: JSON.stringify(body)
+        })
+        .then(response => response.json())
+        .then(res => console.log('Curtiu', res))
+        .catch(err => console.log(err))
+
+        return result
+    }
+
+    static async deslike(id){
+        const result = await fetch(`${this.baseUrl}/likes/${id}/`, {
+            method: 'DELETE',
+            headers: this.headers
+        })
+        .then(res => console.log('Deslike', res))
+        return result
+    }
+
     static async seguir(body){
         const result = await fetch(`${this.baseUrl}/users/follow/`, {
             method: 'POST',

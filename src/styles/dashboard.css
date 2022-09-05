@@ -63,15 +63,14 @@ main{
     color: var(--branco);
 }
 
-.section__posts{
-}
-
 .section__posts h1{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 article{
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #808080;
 }
 
 article > h2 {
@@ -118,6 +117,42 @@ article > p{
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+}
+
+.modalPost{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    z-index: 1;
+}
+
+#closeModal{
+    color: var(--branco);
+    cursor: pointer;
+    position: relative;
+    margin-top: 74px;
+    margin-right: 10%;
+    font-size: 32px;
+    align-self: flex-end;
+}
+
+.modal{
+    background-color: var(--branco);
+    width: 75%;
+    height: auto;
+    padding: 40px 24px;
+    border-radius: 10px;
+}
+
+#conteudoModal{
+    width: 100%;
+    overflow-x: hidden;
 }
 
 aside{

@@ -87,13 +87,108 @@ static async renderizandoUserLogado(){
     seguidoresUserLogado.innerText = `${user.followers.length} seguidores`
 }
 
+static async buscandoPosts(){
+    const array = await Api.buscaPosts()
+    const result = array.results
+
+    result.forEach(element => {
+        this.renderizaPosts(element)
+    })
 }
-let user = await Api.usuarioLogado()
 
+static async renderizaPosts(array){
+    let sessaoPosts = document.querySelector('.section__posts')
 
+    let article = document.createElement('article')
+    let divPerfilInfo = document.createElement('div')
+    divPerfilInfo.classList.add('pefil__info')
+    let divPerfilFoto = document.createElement('div')
+    divPerfilFoto.classList.add('perfil__foto')
+    let image = document.createElement('img')
+    image.src = array.author.image
+    image.alt = `Imagem de ${array.author.username}`
+    let divNomeCargo = document.createElement('div')
+    divNomeCargo.classList.add('nome__cargo')
+    let tagH2Nome = document.createElement('h2')
+    tagH2Nome.innerText = array.author.username
+    let tagPCargo = document.createElement('p')
+    tagPCargo.innerText = array.author.work_at
+    let tagH2Titulo = document.createElement('h2')
+    tagH2Titulo.innerText = array.title
+    let tagPcontent = document.createElement('p')
+    tagPcontent.innerText = array.description
+    let tagDiv = document.createElement('div')
+    let buttonAbrirPost = document.createElement('button')
+    buttonAbrirPost.innerText = 'Abrir Post'
+    buttonAbrirPost.classList.add('abre__post')
+    let spanLike = document.createElement('span')
+    spanLike.classList.add('like__span')
+    let spanQntLike = document.createElement('span')
+    spanQntLike.innerText = array.likes.length
+
+    article.append(divPerfilInfo, tagH2Titulo, tagPcontent, tagDiv)
+    divPerfilInfo.append(divPerfilFoto, divNomeCargo)
+    divPerfilFoto.appendChild(image)
+    divNomeCargo.append(tagH2Nome, tagPCargo)
+    tagDiv.append(buttonAbrirPost, spanLike, spanQntLike)
+
+    sessaoPosts.appendChild(article)
+
+    buttonAbrirPost.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        this.criaModal(array)
+
+        let modalPost = document.querySelector('.modalPost')
+        modalPost.style.display = 'flex'
+    })
+
+    let spanModal = document.getElementById('closeModal')
+        spanModal.addEventListener('click', () => {
+        let modalPost = document.querySelector('.modalPost')
+        modalPost.style.display = 'none'
+    })
+
+    spanLike.addEventListener('click', async () => {
+        spanLike.classList.toggle("curtido")
+        
+        if(spanLike.classList[1] == "curtido"){
+            spanQntLike.innerText = array.likes.length + 1
+
+            let idPost = {
+                'post_uuid': array.uuid
+            }
+            
+            await Api.buscaLikes(idPost)
+        } else if (!spanLike.classList[1]){
+            let id = array.likes
+            Api.deslike(id)
+            spanQntLike.innerText = array.likes.length
+        }
+    })
+}
+
+static async criaModal(array){
+    let imagemModal = document.getElementById('imagemModal')
+    let nomeModal = document.getElementById('nomeModal')
+    let cargoModal = document.getElementById('cargoModal')
+    let tituloModal = document.getElementById('tituloModal')
+    let conteudoModal = document.getElementById('conteudoModal')
+
+    imagemModal.src = array.author.image
+    imagemModal.alt = `Imagem de ${array.author.username}`
+    nomeModal.innerText = array.author.username
+    cargoModal.innerText = array.author.work_at
+    tituloModal.innerText = array.title
+    conteudoModal.innerText = array.description
+
+}
+
+}
 
 BotoesDashboard.postar()
 BotoesDashboard.sair()
 BotoesDashboard.voltaLogin()
 Dashboard.buscaUsuarios()
 Dashboard.renderizandoUserLogado()
+Dashboard.buscandoPosts()
