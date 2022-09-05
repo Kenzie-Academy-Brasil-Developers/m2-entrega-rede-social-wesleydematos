@@ -1,3 +1,5 @@
+import { Api } from "./models/api.js"
+
 export class BotoesDashboard {
     static sair(){
         let btnCadLogin = document.getElementById('btnCadLogin')
@@ -5,6 +7,7 @@ export class BotoesDashboard {
         btnCadLogin.addEventListener('click', (event)=>{
             event.preventDefault()
 
+            localStorage.clear()
             window.location.replace('../../index.html')
         })
     }
@@ -30,40 +33,30 @@ export class BotoesDashboard {
             }
         })
 
-        console.log(btnPostar)
-
-        btnPostar.addEventListener('click', (event)=> {
+        btnPostar.addEventListener('click', async (event)=> {
             event.preventDefault()
 
             btnPostar.classList.remove('post__pronto')
 
-            // CRIAR LOGICA DE POST
+            let body = {
+                'title':tituloPost.value,
+                'description': descricaoPost.value
+            }
+            
+            await Api.criaPost(body)
+
             tituloPost.value = ''
             descricaoPost.value = ''
         })
     }
 
-    static seguir(){
+    static voltaLogin(){
+        let token = localStorage.getItem('@redeSocial:token')
+        let user_uuid = localStorage.getItem('@redeSocial:user_uuid')
 
-    }
-
-    static pararDeSeguir(){
-
-    }
-
-    static curtir(){
-
-    }
-
-    static descurtir(){
-
-    }
-
-    static abrirPost(){
-
-    }
-
-    static fecharPost(){
-
+        if(!token || !user_uuid){
+            localStorage.clear()
+            window.location.assign('../../index.html')
+        }
     }
 }

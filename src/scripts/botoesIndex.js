@@ -1,3 +1,5 @@
+import { Api } from "./models/api.js"
+
 export class BotoesIndex{
     static redirecionaCadastro(botao){
         botao.addEventListener('click', (event)=>{
@@ -22,9 +24,15 @@ export class BotoesIndex{
         logarBtn.addEventListener('click', (event)=>{
             event.preventDefault()
 
-            // ADICIONAR LOGICA DE LOGIN
+            let email = document.getElementById('inputEmail')
+            let password = document.getElementById('inputSenha')
 
-            window.location.assign('./src/pages/dashboard.html')
+            let body = JSON.stringify({
+                "email": email.value,
+                "password": password.value
+            })
+
+            Api.logar(body)
         })
     }
 }
