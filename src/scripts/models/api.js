@@ -112,7 +112,7 @@ export class Api{
             body: JSON.stringify(body)
         })
         .then(response => response.json())
-        .then(res => console.log('Curtiu', res))
+        .then(response => console.log('Curtiu', response))
         .catch(err => console.log(err))
 
         return result
@@ -123,7 +123,8 @@ export class Api{
             method: 'DELETE',
             headers: this.headers
         })
-        .then(res => console.log('Deslike', res))
+        .then(response => console.log('Descurtiu', response))
+        .catch(err => console.log(err))
         return result
     }
 
@@ -134,7 +135,7 @@ export class Api{
             body: JSON.stringify(body)
         })
         .then(response => response)
-        .then(res => console.log('seguindo', res))
+        .then(response => console.log('Começou a seguir', response))
         .catch(err => console.log(err))
 
         return result
@@ -145,7 +146,7 @@ export class Api{
             method: 'DELETE',
             headers: this.headers
         })
-        .then(res => console.log('excluindo',res))
+        .then(response => console.log('Parou de seguir', response))
         .catch(err => console.log(err))
 
         return result

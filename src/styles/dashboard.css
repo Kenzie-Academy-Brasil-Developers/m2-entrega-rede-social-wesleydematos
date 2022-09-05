@@ -99,6 +99,7 @@ article > p{
 
 .like__span{
     margin-left: 32px;
+    margin-right: 5px;
 }
 
 .like__span::before{

@@ -123,6 +123,7 @@ static async renderizaPosts(array){
     buttonAbrirPost.classList.add('abre__post')
     let spanLike = document.createElement('span')
     spanLike.classList.add('like__span')
+    spanLike.id = array.uuid
     let spanQntLike = document.createElement('span')
     spanQntLike.innerText = array.likes.length
 
@@ -151,17 +152,20 @@ static async renderizaPosts(array){
 
     spanLike.addEventListener('click', async () => {
         spanLike.classList.toggle("curtido")
-        
+
+        let idPost = {
+            'post_uuid': spanLike.id
+        }
+
         if(spanLike.classList[1] == "curtido"){
             spanQntLike.innerText = array.likes.length + 1
-
-            let idPost = {
-                'post_uuid': array.uuid
-            }
             
             await Api.buscaLikes(idPost)
         } else if (!spanLike.classList[1]){
-            let id = array.likes
+            let arrayLikes = array.likes
+            let arrayLikesReverse = arrayLikes.reverse()
+            let id = arrayLikesReverse[0].uuid.toString()
+
             Api.deslike(id)
             spanQntLike.innerText = array.likes.length
         }
